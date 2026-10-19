@@ -1,5 +1,5 @@
-// TODO colocar em .env
-export const API = 'http://localhost:8000'
+// pode trocar com VITE_API_URL (ex: no .env.local)
+export const API = import.meta.env.VITE_API_URL || 'http://localhost:8000'
 
 export async function get(path) {
   const r = await fetch(API + path)
